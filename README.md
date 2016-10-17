@@ -1,0 +1,2 @@
+# Android_DynamicAdding
+一个LinearLayout动态添加子控件的Demo
