@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(MainActivity.this,SelectFileActivity.class);
         startActivity(intent);
-        finish();
+
     }
 
 

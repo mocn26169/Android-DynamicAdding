@@ -28,13 +28,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
+/**
+ * 通过分组获取联系人
+ * @url /contactuserapp/getcontactusersbygroup
+ * @param groupid  分组id
+ * @return
+ */
 
+/**
+ * 通过部门分组
+ * @url /contactuserapp/getcontactusersbydep
+ * depName  部门名称
+ * @return
+ */
 public class SelectFileActivity extends AppCompatActivity {
 
     private static final String TAG = "SelectFileActivity";
 //    private static final String URL = "http://121.40.148.206:88/Data/Server.svc/zyUpload/Action.ashx";
 //    private static final String URL = "http://121.40.148.206:88/JS/zyUpload/Action.ashx";
     private static final String URL = "http://121.40.148.206:8091/JS/zyUpload/Action.ashx";
+//    private static final String URL = "http://121.40.86.160:8090/contactuserapp/getcontactusersbydep?depName=%E8%B4%B5%E9%98%B3%E5%B8%82%E5%9B%BD%E5%9C%9F%E8%B5%84%E6%BA%90%E5%B1%80%E4%BA%91%E5%B2%A9%E5%88%86%E5%B1%80";
 
     private LinearLayout linear_select;
     private LinearLayout linear_parent;
@@ -90,7 +103,7 @@ public class SelectFileActivity extends AppCompatActivity {
     }
 
 
-    public  void httpUpload( FileBean bean, String url) throws Exception {
+    public  void httpUpload(final FileBean bean, String url) throws Exception {
 
         //判断上次路径是否为空
         if (TextUtils.isEmpty(bean.getLocalUrl().trim())) {
@@ -120,6 +133,21 @@ public class SelectFileActivity extends AppCompatActivity {
                     if (statusCode == 200) {
                         String s1=new String(responseBody);
                         Log.e(TAG,"上传成功----------"+s1);
+                        bean.setWebUrl(s1);
+
+                        FileBean bean;
+                        boolean startOther = true;
+                        for (int i = 0; i <lists.size() ; i++) {
+                             bean = lists.get(i);
+                            Log.e(TAG,"bean getWebUrl----------"+bean.getWebUrl());
+                            if (TextUtils.isEmpty(bean.getWebUrl())){
+                                startOther= false;
+                            }
+                        }
+
+                        if (startOther){
+                            doOthers();
+                        }
                     }
                 }
 
@@ -141,6 +169,11 @@ public class SelectFileActivity extends AppCompatActivity {
     }
     private  void doOthers(){
         Log.e(TAG, "doOthers ==> ");
+        FileBean bean;
+        for (int i = 0; i <lists.size() ; i++) {
+            bean = lists.get(i);
+            Log.e(TAG,"bean getWebUrl22222----------"+bean.getWebUrl());
+        }
     }
 
     /**
