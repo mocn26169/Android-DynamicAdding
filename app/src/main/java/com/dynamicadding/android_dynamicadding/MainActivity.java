@@ -1,6 +1,7 @@
 package com.dynamicadding.android_dynamicadding;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         linear_parent = (LinearLayout) findViewById(R.id.linear_parent);
+
+        Intent intent = new Intent(MainActivity.this,SelectFileActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 

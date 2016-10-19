@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_add_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/burlywood"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="选择一个文件"/>
+    </LinearLayout>
+
+    <com.dynamicadding.android_dynamicadding.AutoNextLineLinearlayout
+        android:id="@+id/linear_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </com.dynamicadding.android_dynamicadding.AutoNextLineLinearlayout>
+
+
+
+        <Button
+            android:id="@+id/btn_uplaod"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:background="@color/burlywood"
+            android:layout_height="wrap_content"
+            android:text="上传"/>
+
+
+</LinearLayout>

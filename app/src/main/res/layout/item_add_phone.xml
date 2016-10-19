@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal">
@@ -17,10 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:textColor="@color/royalblue"
             android:text="111"
-            android:textSize="20dp"
+            android:textSize="12dp"
             />
-        <ImageView
+
+        <Button
+            android:id="@+id/btn_delete"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:background="@mipmap/detstation"
