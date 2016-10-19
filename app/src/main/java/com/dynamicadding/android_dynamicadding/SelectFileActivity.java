@@ -48,6 +48,10 @@ public class SelectFileActivity extends AppCompatActivity {
 //    private static final String URL = "http://121.40.148.206:88/JS/zyUpload/Action.ashx";
     private static final String URL = "http://121.40.148.206:8091/JS/zyUpload/Action.ashx";
 //    private static final String URL = "http://121.40.86.160:8090/contactuserapp/getcontactusersbydep?depName=%E8%B4%B5%E9%98%B3%E5%B8%82%E5%9B%BD%E5%9C%9F%E8%B5%84%E6%BA%90%E5%B1%80%E4%BA%91%E5%B2%A9%E5%88%86%E5%B1%80";
+//    private static final String URL = "http://121.40.86.160:8090/contactuserapp/getcontactusersbydep?depName=%E8%B4%B5%E9%98%B3%E5%B8%82%E5%9B%BD%E5%9C%9F%E8%B5%84%E6%BA%90%E5%B1%80%E4%BA%91%E5%B2%A9%E5%88%86%E5%B1%80";
+
+    //回复
+//   http://121.40.86.160:8090/eventapp/addrecy?eventid=35&eventcontent=%E4%BA%8B%E4%BB%B6111111111111111111111111111111111&recvphonenums=15908517851,13333333333,13628505300,18888888888,13333333333,18888888888,13628505300,15908517851,15019568265&recvcontactusers=%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B5%8B%E8%AF%95%E5%91%98,%E4%B9%94%E5%B8%83%E6%96%AF,%E6%9C%B1%E9%B9%8F,2%E5%8F%B7%E4%BA%BA,%E4%B9%94%E5%B8%83%E6%96%AF,2%E5%8F%B7%E4%BA%BA,%E6%9C%B1%E9%B9%8F,%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B5%8B%E8%AF%95%E5%91%98,15019568265
 
     private LinearLayout linear_select;
     private LinearLayout linear_parent;
@@ -163,10 +167,10 @@ public class SelectFileActivity extends AppCompatActivity {
                     error.printStackTrace();
                 }
             });
-
         }
-
     }
+
+
     private  void doOthers(){
         Log.e(TAG, "doOthers ==> ");
         FileBean bean;
